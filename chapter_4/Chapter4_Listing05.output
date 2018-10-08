@@ -1,0 +1,23 @@
+testdb=> SELECT f_nullable( 10, 'Ten' ) IS NULL;
+INFO:  Invoked with [10] and [Ten]
+ ?column?
+----------
+ f
+(1 row)
+
+testdb=> SELECT f_nullable( 10, NULL ) IS NULL;
+ ?column?
+----------
+ t
+(1 row)
+
+testdb=> SELECT f_nullable( NULL, 'Ten' ) IS NULL;
+ ?column?
+----------
+ t
+(1 row)
+
+testdb=> SELECT f_nullable( NULL, NULL ) IS NULL;
+ ?column?
+----------
+ t

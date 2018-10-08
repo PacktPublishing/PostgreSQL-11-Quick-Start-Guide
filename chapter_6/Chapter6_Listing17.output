@@ -1,0 +1,9 @@
+testdb=> INSERT INTO files( f_name, f_hash )
+         VALUES
+           ( 'Conclusions.pdf', 'aabbccddeeff00ZZaabbccddeeff00ZZ' )
+         , ('Introduction.txt', '1234567890abcdef1234567890abcdef' );
+
+
+WARNING:  Illegal hash [aabbccddeeff00zzaabbccddeeff00zz]
+INSERT 0 1   -- only one tuple out of two has been inserted!
+

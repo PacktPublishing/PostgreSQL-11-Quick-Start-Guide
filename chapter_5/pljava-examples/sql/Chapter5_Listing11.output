@@ -1,0 +1,17 @@
+testdb=# SELECT sqlj.replace_jar(
+        'file:///usr/home/luca/pljava-examples/target/pg11ssp-pljava-0.0.1.jar',
+        'PG11SSP',
+        true );
+
+testdb=# SELECT *
+        FROM f_j_files_from_directory( '/home/luca/pljava-examples/src/main/java/pg11ssp' );
+
+INFO:  Building tuple for file /home/luca/pljava-examples/src/main/java/pg11ssp/Functions.java
+INFO:  Building tuple for file /home/luca/pljava-examples/src/main/java/pg11ssp/FileTupleBuilder.java
+INFO:  File /home/luca/pljava-examples/src/main/java/pg11ssp/Functions.java at tuple number 0
+INFO:  File /home/luca/pljava-examples/src/main/java/pg11ssp/FileTupleBuilder.java at tuple number 1
+ pk  |        f_name         | f_size |                  f_hash                  | f_type |           ts
+-----+-----------------------+--------+------------------------------------------+--------+-------------------------
+ 246 | Functions.java        |    689 | d97d6cf18455b0e67f99c5e6bd0182ae29cdcdd9 | java   | 2018-07-24 14:07:56.168
+ 247 | FileTupleBuilder.java |   3235 | 002b9daf0d4b4f8bbe2fac0ff1608fbcc3532690 | java   | 2018-07-24 14:07:56.184
+(2 rows)

@@ -1,0 +1,15 @@
+                                     prosrc
+---------------------------------------------------------------------------------
+                                                                                +
+   DECLARE                                                                      +
+     current_tuple files%rowtype;                                               +
+     current_file  text;                                                        +
+     name_parts    text[];                                                      +
+   BEGIN                                                                        +
+                                                                                +
+     RAISE DEBUG 'Reading files into %', dir;                                   +
+                                                                                +
+     FOR current_file IN SELECT pg_ls_dir( dir ) LOOP                           +
+                                                                                +
+         RAISE DEBUG 'Building tuple for file [%]', current_file;               +
+...

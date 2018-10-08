@@ -1,0 +1,8 @@
+testdb=> SELECT * FROM f_fake_small_files( 5 );
+ pk  | file_name | file_type
+-----+-----------+-----------
+ 148 | File_1    | png
+ 149 | File_2    | mp3
+ 150 | File_3    | txt
+ 151 | File_4    | png
+ 152 | File_5    | mp3

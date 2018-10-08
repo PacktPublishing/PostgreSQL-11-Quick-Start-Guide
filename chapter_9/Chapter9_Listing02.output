@@ -1,0 +1,16 @@
+testdb=> LISTEN insert_table;
+LISTEN
+testdb=> SELECT pg_notify( 'insert_table',
+                           'A new row has been inserted!' );
+ pg_notify 
+-----------
+ 
+(1 row)
+
+Asynchronous notification "insert_table" with payload "A new row has been inserted!" received from server process with PID 806.
+
+testdb=> SELECT *
+         FROM pg_listening_channels();
+ pg_listening_channels 
+-----------------------
+ insert_table

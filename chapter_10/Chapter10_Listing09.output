@@ -1,0 +1,5 @@
+testdb=> SELECT f_url_to_repository(
+           'https://github.com/fluca1978/fluca1978-pg-utils/commit/bd58bc3203326c6311180cf9177420c6d88d38af' );
+                                       f_url_to_repository
+--------------------------------------------------------------------------------------------------
+ (https,github.com/fluca1978/fluca1978-pg-utils,master,/bd58bc3203326c6311180cf9177420c6d88d38af)

@@ -1,0 +1,6 @@
+DEBUG:  Inserting tag [Pets] child of [<NULL>]
+DEBUG:  Committing [Pets]
+DEBUG:  Inserting tag [Cats] child of [98]
+DEBUG:  Committing [Cats]
+DEBUG:  Inserting tag [Sofia] child of [99]
+DEBUG:  Committing [Sofia]

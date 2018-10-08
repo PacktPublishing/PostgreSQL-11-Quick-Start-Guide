@@ -1,0 +1,21 @@
+-- the procedure does not operate
+-- on the top level transaction
+testdb=> BEGIN;
+testdb=> CALL p_tx_action();
+testdb=> COMMIT;
+
+
+-- the procedure forces a commit
+testdb=> BEGIN;
+testdb=> CALL p_tx_action();
+ERROR:  invalid transaction termination
+CONTEXT:  PL/pgSQL function p_tx_action(integer) line 7 at COMMIT
+STATEMENT:  CALL p_tx_action(1);
+
+-- the procedure forces a commit
+testdb=> BEGIN;
+testdb=> CALL p_tx_action();
+ERROR:  invalid transaction termination
+CONTEXT:  PL/pgSQL function p_tx_action(integer) line 10 at ROLLBACK
+STATEMENT:  CALL p_tx_action(2);
+

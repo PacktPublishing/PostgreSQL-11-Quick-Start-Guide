@@ -1,0 +1,5 @@
+ERROR:  variable "page_size" is declared CONSTANT
+LINE 11:    page_size := page_size * 2;
+
+ERROR:  variable "database_name" is declared CONSTANT
+LINE 13:    database_name := 'MySQL';

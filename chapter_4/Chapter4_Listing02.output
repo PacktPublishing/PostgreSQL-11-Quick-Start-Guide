@@ -1,0 +1,4 @@
+testdb=> SELECT f_args( 10, 1.2, 'hello world' );
+INFO:  a (type integer) = 10
+INFO:  $2(type double precision) = 1.2
+INFO:  b (type text) = hello world

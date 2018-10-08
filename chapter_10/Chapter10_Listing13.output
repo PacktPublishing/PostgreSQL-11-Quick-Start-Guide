@@ -1,0 +1,7 @@
+ attribute_name | attribute_type
+----------------+----------------
+ repo_protocol  | text
+ repo_url       | text
+ repo_branch    | text
+ repo_commit    | text
+ repo_sync      | boolean

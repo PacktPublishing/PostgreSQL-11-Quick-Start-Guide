@@ -1,0 +1,5 @@
+commanet = 'PostgreSQL 11 Server Side Programming Example Extension'
+default_version = '1.0'
+superuser       = false
+relocatable     = false
+schema          = 'packt'

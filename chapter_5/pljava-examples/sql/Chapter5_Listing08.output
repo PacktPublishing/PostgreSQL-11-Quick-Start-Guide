@@ -1,0 +1,7 @@
+testdb=# SELECT f_j_split_tag_to_string( 'holidays > 2018 > sicily', '>' );
+INFO: pg11ssp.Functions Splitting tag string [holidays > 2018 > sicily] with [>]
+ f_j_split_tag_to_string
+-------------------------
+ holidays
+ 2018
+ sicily

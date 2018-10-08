@@ -1,0 +1,28 @@
+testdb=# SELECT '600 600 500'::imgres,
+                '<480x480@150dpi>'::imgres;
+        imgres         |        imgres
+-----------------------+-----------------------
+ <600 x 600 @ 500 dpi> | <480 x 480 @ 150 dpi>
+
+testdb=# SELECT '600 600 500'::imgres
+             +  '200 200 500'::imgres;
+       ?column?
+-----------------------
+ <800 x 800 @ 500 dpi>
+(1 row)
+
+testdb=# SELECT '600 600 500'::imgres
+             +  '200 200 400'::imgres;
+ERROR:  Cannot add an image with resolution 500 to one with resolution 400 dpi
+
+testdb=# SELECT '600 600 500'::imgres
+             =  '600 600 500'::imgres;
+ ?column?
+----------
+ t
+
+testdb=# SELECT '600 600 500'::imgres
+             =  '200 200 1500'::imgres;
+ ?column?
+----------
+ f

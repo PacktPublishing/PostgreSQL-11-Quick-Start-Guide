@@ -1,0 +1,12 @@
+testdb=> SET client_min_messages TO debug;
+
+testdb=> SELECT * FROM f_fake_files( 3 );
+DEBUG:  1) 42 generated
+DEBUG:  2) 43 generated
+DEBUG:  3) 44 generated
+
+pk | f_name |   f_size   |              f_hash              | f_type |             ts
+----+--------+------------+----------------------------------+--------+----------------------------
+ 42 | File_1 |  979597.23 | 8ba5c586d44c70ca777c0f66b5243b40 | png    | 2018-07-16 16:18:27.782463
+ 43 | File_2 | 7134489.49 | f08d556d964b7a7b9374d96c6c2ca8ec | mp3    | 2018-07-16 16:18:27.782463
+ 44 | File_3 |  258768.02 | aac47180851be5de7f5b19fa7afa91b7 | txt    | 2018-07-16 16:18:27.782463

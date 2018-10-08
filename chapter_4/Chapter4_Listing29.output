@@ -1,0 +1,18 @@
+testdb=> CALL p_insert_tags( 'Pets > BAD > Cats > Sofia > Winter', '>', 3, 'BAD' );
+DEBUG:  Inserting tag [Pets] child of [<NULL>]
+DEBUG:  Committing tag [Pets] with pk 93
+DEBUG:  Inserting tag [BAD] child of [93]
+2018-07-20 19:38:27.642 CEST [806] WARNING:  Aborting for tag [BAD]
+2018-07-20 19:38:27.642 CEST [806] CONTEXT:  PL/pgSQL function p_insert_tags(text,text,integer,text[]) line 31 at RAISE
+WARNING:  Aborting for tag [BAD]
+DEBUG:  Inserting tag [Cats] child of [93]
+DEBUG:  Committing tag [Cats] with pk 95
+DEBUG:  Inserting tag [Sofia] child of [95]
+DEBUG:  Committing tag [Sofia] with pk 96
+DEBUG:  Inserting tag [Winter] child of [96]
+2018-07-20 19:38:27.644 CEST [806] WARNING:  Aborting [Winter], too much tags!
+2018-07-20 19:38:27.644 CEST [806] CONTEXT:  PL/pgSQL function p_insert_tags(text,text,integer,text[]) line 51 at RAISE
+WARNING:  Aborting [Winter], too much tags!
+ max_tag_count 
+---------------
+             3

@@ -1,0 +1,7 @@
+testdb=> LISTEN new_music_event;
+LISTEN
+testdb=> INSERT INTO files( f_name, f_hash, f_type )
+         VALUES( 'sad-but-true.mp3', 'abdde44fcc763212', 'mp3') ;
+DEBUG:  Notifying new primary key 12 over channel new_music_event
+INSERT 0 1
+Asynchronous notification "new_music_event" with payload "12" received from server process with PID 806.

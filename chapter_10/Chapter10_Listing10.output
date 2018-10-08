@@ -1,0 +1,20 @@
+testdb=> SELECT f_name,
+               (f_repo).repo_url,
+               (f_repo).repo_commit
+         FROM files
+         WHERE f_name = 'chapter3.org';
+
+    f_name    |  repo_url   | repo_commit
+--------------+-------------+-------------
+ chapter3.org | ~/git/packt | master
+
+
+testdb=> SELECT f_name,
+         (f_repo).repo_url,
+         (f_repo).repo_commit
+         FROM files
+         WHERE (f_repo).repo_protocol IS NOT NULL;
+
+    f_name    |  repo_url   | repo_commit
+--------------+-------------+-------------
+ chapter3.org | ~/git/packt | master

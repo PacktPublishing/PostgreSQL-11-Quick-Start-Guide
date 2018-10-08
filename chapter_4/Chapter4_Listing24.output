@@ -1,0 +1,7 @@
+testdb=> SELECT *
+         FROM
+         f_insert_tags( 'holidays > 2018 > sicily > family' );
+DEBUG:  Inserting tag [holidays] child of [<NULL>]
+DEBUG:  Inserting tag [2018] child of [37]
+DEBUG:  Inserting tag [sicily] child of [38]
+DEBUG:  Inserting tag [family] child of [39]

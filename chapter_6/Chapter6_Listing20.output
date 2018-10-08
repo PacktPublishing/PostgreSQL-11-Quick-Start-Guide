@@ -1,0 +1,41 @@
+testdb=> DELETE FROM files
+         WHERE f_type = 'org';
+
+DEBUG:  Moving tuple [26] with name [Introduction.txt] to archive_files
+DEBUG:  Moving tuple [28] with name [File2] to archive_files
+DEBUG:  Moving tuple [30] with name [File4] to archive_files
+DEBUG:  Moving tuple [32] with name [File6] to archive_files
+DEBUG:  Moving tuple [34] with name [File8] to archive_files
+DEBUG:  Moving tuple [36] with name [File10] to archive_files
+DEBUG:  Moving tuple [27] with name [File1] to archive_files
+DEBUG:  Moving tuple [29] with name [File3] to archive_files
+DEBUG:  Moving tuple [31] with name [File5] to archive_files
+DEBUG:  Moving tuple [33] with name [File7] to archive_files
+DEBUG:  Moving tuple [35] with name [File9] to archive_files
+DELETE 11
+
+testdb=> SELECT *
+         FROM files
+         WHERE f_type = 'org';
+
+ pk | f_name | f_size | f_hash | f_type 
+----+--------+--------+--------+--------
+(0 rows)
+
+testdb=> SELECT *
+         FROM archive_files
+         WHERE f_type = 'org';
+
+ pk |      f_name      | f_size |              f_hash              | f_type 
+----+------------------+--------+----------------------------------+--------
+ 26 | Introduction.txt | 0.0000 | 1234567890abcdef1234567890abcdef | org
+ 28 | File2            | 0.0000 | c81e728d9d4c2f636f067f89cc14862c | org
+ 30 | File4            | 0.0000 | a87ff679a2f3e71d9181a67b7542122c | org
+ 32 | File6            | 0.0000 | 1679091c5a880faf6fb5e6087eb1b2dc | org
+ 34 | File8            | 0.0000 | c9f0f895fb98ab9159f51fd0297e236d | org
+ 36 | File10           | 0.0000 | d3d9446802a44259755d38e6d163e820 | org
+ 27 | File1            | 0.0000 | c4ca4238a0b923820dcc509a6f75849b | org
+ 29 | File3            | 0.0000 | eccbc87e4b5ce2fe28308fd9f2a7baf3 | org
+ 31 | File5            | 0.0000 | e4da3b7fbbce2345d7772b0674a318d5 | org
+ 33 | File7            | 0.0000 | 8f14e45fceea167a5a36dedd4bea2543 | org
+ 35 | File9            | 0.0000 | 45c48cce2e2d7fbdea1afc51c7c6ad26 | org

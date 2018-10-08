@@ -1,0 +1,15 @@
+testdb=> SELECT f_name, f_human_file_size( f_size )
+         FROM files;
+
+    f_name    | f_human_file_size
+--------------+-------------------
+ picture1.png | 120.80MB
+ picture2.png | 520.10MB
+ picture3.png | 300.00MB
+ audio1.mp3   | 157.65MB
+ audio2.mp3   | 221.50MB
+ audio3.mp3   | 21.50MB
+ chapter2.org | 22.40KB
+ chapter3.org | 36.40KB
+ TestFile.txt | 123.56KB
+ foo.txt      | 10.50KB

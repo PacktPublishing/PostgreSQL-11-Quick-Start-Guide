@@ -1,0 +1,11 @@
+testdb=> SELECT
+         f_tags_to_string( '>>', 'favourites', 'music', 'rock' );
+      f_tags_to_string
+-----------------------------
+ favourites >> music >> rock
+
+testdb=> SELECT
+         f_tags_to_string( '~', 'work', 'travel', 'conferences', 'rome', '2018' );
+             f_tags_to_string
+-------------------------------------------
+ work ~ travel ~ conferences ~ rome ~ 2018

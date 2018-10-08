@@ -1,0 +1,24 @@
+-- all default values
+testdb=> SELECT f_args();
+INFO:  a (type integer) = 10
+INFO:  $2(type double precision) = 3.14
+INFO:  b (type text) = Hello Function World!
+
+-- two default values
+testdb=> SELECT f_args( 123 );
+INFO:  a (type integer) = 123
+INFO:  $2(type double precision) = 3.14
+INFO:  b (type text) = Hello Function World!
+
+-- no default values
+testdb=> SELECT f_args( 123, 1.5, 'Mewl' );
+INFO:  a (type integer) = 123
+INFO:  $2(type double precision) = 1.5
+INFO:  b (type text) = Mewl
+
+-- DEFAULT does not triggers when a NULL value
+-- is passed!
+testdb=> SELECT f_args( 123, NULL, NULL );
+INFO:  a (type integer) = 123
+INFO:  $2(type double precision) = <NULL>
+INFO:  b (type text) = <NULL>

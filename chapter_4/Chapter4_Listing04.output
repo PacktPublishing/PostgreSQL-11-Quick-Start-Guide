@@ -1,0 +1,4 @@
+testdb=> SELECT * FROM f_args( 10, 5 );
+ column1 |           b
+---------+-----------------------
+      50 | The real value was  5

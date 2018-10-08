@@ -1,0 +1,8 @@
+    f_name    | f_type | f_media_type
+--------------+--------+--------------
+ picture1.png | png    | image
+ picture2.png | png    | image
+ picture3.png | png    | image
+ audio1.mp3   | mp3    | audio
+ audio2.mp3   | mp3    | audio
+ audio3.mp3   | mp3    | audio

@@ -1,0 +1,34 @@
+CREATE OR REPLACE FUNCTION
+f_fake_files( int DEFAULT 10 )
+RETURNS SETOF files
+AS
+ $code$
+    use Digest::MD5 qw(md5_base64);
+    my ( $max ) = @_;
+    my $current_tuple;  # hash to store a single tuple
+
+    for my $i ( 1 .. $max ){
+                 # issue a query to invoke the 'nextval' function
+        my $pk = spi_exec_query( 'SELECT nextval( \'files_pk_seq\' )', 1 )
+                    ->{ rows }[ 0 ]   # get the first row
+                    ->{ nextval };    # get the only 'nextval' column
+        $current_tuple->{ pk } = $pk;
+        $current_tuple->{ f_name } = "File_$i";
+        $current_tuple->{ f_size } = rand() * 1024 * 1024 / rand();
+
+        $current_tuple->{ f_type } = 'txt' if ( $i % 3 == 0 );
+        $current_tuple->{ f_type } = 'png' if ( $i % 3 == 1 );
+        $current_tuple->{ f_type } = 'mp3' if ( $i % 3 == 2 );
+
+        $current_tuple->{ f_hash } = md5_base64( $current_tuple->{ f_name } );
+        $current_tuple->{ ts }     = localtime();
+
+        elog( 'DEBUG', "Generated $i = $current_tuple->{ f_name }" );
+        return_next( $current_tuple );
+
+    }
+
+    # all done
+    return undef;
+ $code$
+LANGUAGE plperlu;

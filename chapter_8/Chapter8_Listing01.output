@@ -1,0 +1,5 @@
+ extname | namespace | version | relocatable_status |                         comment                         
+---------+-----------+---------+--------------------+---------------------------------------------------------
+ plperl  | 11        | 1.0     | NOT-RELOCATABLE    | PL/Perl procedural language
+ plperlu | 11        | 1.0     | NOT-RELOCATABLE    | PL/PerlU untrusted procedural language
+ plpgsql | 11        | 1.0     | NOT-RELOCATABLE    | PL/pgSQL procedural language

@@ -1,0 +1,10 @@
+QUERY PLAN
+--------------------------------------------------------------------------------
+Nested Loop  (cost=18.82..38.84 rows=1000 width=28)
+  CTE get_random_number
+     ->  Result  (cost=0.00..0.01 rows=1 width=8)
+  CTE delete_images
+     ->  Delete on files  (cost=0.00..18.80 rows=880 width=6)
+         ->  Seq Scan on files  (cost=0.00..18.80 rows=880 width=6)
+  ->  CTE Scan on get_random_number r  (cost=0.00..0.02 rows=1 width=24)
+  ->  Function Scan on generate_series s  (cost=0.00..10.00 rows=1000 width=4)

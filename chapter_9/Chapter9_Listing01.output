@@ -1,0 +1,8 @@
+XWtestdb=> LISTEN table_insert;
+LISTEN
+testdb=> NOTIFY table_insert, 'A new tuple has been inserted';
+NOTIFY
+Asynchronous notification "table_insert" with payload "A new tuple has been inserted" received from server process with PID 834.
+testdb=> UNLISTEN table_insert;
+UNLISTEN
+testdb=> NOTIFY table_insert, 'Two new tuples has been inserted';

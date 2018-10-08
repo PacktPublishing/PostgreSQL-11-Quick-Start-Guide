@@ -1,0 +1,34 @@
+testdb=> UPDATE files
+         SET ts = current_timestamp
+         WHERE f_type = 'txt'
+         RETURNING *;
+
+DEBUG:  Trigger [tr_notifier] fired [BEFORE] [UPDATE] [ROW] against public.files
+DEBUG:  NEW tuple pk = 27, OLD tuple pk = 27
+
+ pk | f_name | f_size | f_hash | f_type | ts
+----+--------+--------+--------+--------+----
+(0 rows)
+
+
+testdb=> INSERT INTO files( f_name, f_size, f_hash, f_type )
+         VALUES( 'chapter4.pdf', 1778965, 'f029d04a81c322f158c608596951c1aa', 'pdf' )
+         RETURNING *;
+
+DEBUG:  Trigger [tr_notifier] fired [BEFORE] [INSERT] [ROW] against public.files
+DEBUG:  NEW tuple: pk = 255
+
+ pk | f_name | f_size | f_hash | f_type | ts
+----+--------+--------+--------+--------+----
+(0 rows)
+
+testdb=> DELETE FROM files
+         WHERE f_type = 'txt'
+         RETURNING *;
+
+DEBUG:  Trigger [tr_notifier] fired [BEFORE] [DELETE] [ROW] against public.files
+DEBUG:  OLD tuple pk = 27
+
+ pk | f_name | f_size | f_hash | f_type | ts
+----+--------+--------+--------+--------+----
+(0 rows)

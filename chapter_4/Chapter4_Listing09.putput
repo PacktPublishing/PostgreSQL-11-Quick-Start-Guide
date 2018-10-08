@@ -1,0 +1,6 @@
+SELECT f_name, f_size FROM f_file_by_type( 'png' );
+    f_name    |     f_size
+--------------+-----------------
+ picture1.png | 129708383096.83
+ picture2.png | 558453371016.99
+ picture3.png | 322122916439.53

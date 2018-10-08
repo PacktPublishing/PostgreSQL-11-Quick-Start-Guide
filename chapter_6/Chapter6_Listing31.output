@@ -1,0 +1,4 @@
+testdb=# DROP FUNCTION f_tr_check_hash CASCADE;
+
+ERROR:  Cannot drop a function!
+CONTEXT:  PL/pgSQL function f_etr_avoid_drop_function() line 8 at RAISE

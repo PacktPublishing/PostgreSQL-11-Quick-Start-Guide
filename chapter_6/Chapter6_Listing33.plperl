@@ -1,0 +1,15 @@
+CREATE OR REPLACE FUNCTION
+f_etr_avoid_drop_function_plperl()
+RETURNS EVENT_TRIGGER
+AS
+  $code$
+
+  elog( DEBUG, "Trigger fired on $_TD->{event} for command $_TD->{tag}" );
+
+  for my $event_tuple ( @{ spi_exec_query( 'SELECT * FROM pg_event_trigger_dropped_objects()' )
+                           ->{ rows } } ) {
+                           
+     die( "Cannot drop a function!" ) if ( $event_tuple->{ object_type } == 'function' );
+  }
+  $code$
+LANGUAGE plperl;

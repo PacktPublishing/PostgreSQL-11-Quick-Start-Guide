@@ -1,0 +1,8 @@
+DO LANGUAGE plperl
+$code$
+  my $query = sprintf "SELECT f_name, f_hash FROM files";
+  my $statement = spi_query( $query );
+  while ( my $tuple = spi_fetchrow( $statement ) ) {
+        elog( DEBUG, "Found file name $tuple->{ f_name } and hash $tuple->{ f_hash }" );
+  }
+$code$;

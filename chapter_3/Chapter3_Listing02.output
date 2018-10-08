@@ -1,0 +1,3 @@
+INFO:  Outer block: i = [10] t = [Hello World!] j = [100]
+INFO:  Inner block i = [PostgreSQL is amazing!] t = [20] j = [999]
+INFO:  Outer block: i = [10] t = [Hello World!] j = [100]

@@ -1,0 +1,4 @@
+ERROR:  column reference "f_type" is ambiguous
+LINE 3:    WHERE  f_type = f_type  -- What is what?
+                 ^
+DETAIL:  It could refer to either a PL/pgSQL variable or a table column.

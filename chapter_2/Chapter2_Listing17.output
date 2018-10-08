@@ -1,0 +1,14 @@
+    t_name    | pk |t_child_of
+--------------+----+----------
+ holidays     | 10 |
+ family       | 12 |
+ music        | 13 |
+ metallica    | 17 |       16
+ foo fighters | 18 |       16
+ rock         | 14 |       13
+ pop          | 15 |       13
+ hard rock    | 16 |       13
+ sicily       | 11 |       10
+ 2017         | 19 |       11
+ 2018         | 20 |       11
+ 2018         | 21 |

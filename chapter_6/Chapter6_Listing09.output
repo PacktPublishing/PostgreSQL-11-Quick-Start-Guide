@@ -1,0 +1,13 @@
+testdb=> ALTER TABLE files
+        ALTER COLUMN f_type SET DEFAULT NULL;
+
+testdb=> INSERT INTO files( f_name, f_hash )
+         VALUES( 'chapter5.pdf', '14b87625d4e6462cc2657daa85bb77bb' );
+
+DEBUG:  Automatically selected file type pdf
+
+testdb=> UPDATE files
+         SET f_name = 'chapter5.odt'
+         WHERE f_name = 'chapter5.pdf';
+
+DEBUG:  Automatically selected file type odt

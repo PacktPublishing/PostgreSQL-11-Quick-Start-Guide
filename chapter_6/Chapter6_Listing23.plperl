@@ -1,0 +1,23 @@
+CREATE OR REPLACE FUNCTION
+f_tr_check_hash_plperl()
+RETURNS TRIGGER
+AS
+  $code$
+    return "SKIP" if ( $_TD->{level} ne 'ROW'
+                     || $_TD->{when} ne 'BEFORE'
+                     || ! grep { $_TD->{event} == $_ } ( 'INSERT', 'UPDATE' ) ); 
+
+    if ( ! $_TD->{new}->{ f_hash } ) {
+       elog( WARNING, 'The hash must be specified' );
+       return "SKIP";
+    }
+
+    # hash always in lower case
+    $_TD->{new}->{ f_hash } = lc $_TD->{new}->{ f_hash };
+
+    return "SKIP" if ( $_TD->{new}->{ f_hash } !~ /[abcdef0-9]{32}/ );
+
+    return "MODIFY";
+
+  $code$
+LANGUAGE plperl;

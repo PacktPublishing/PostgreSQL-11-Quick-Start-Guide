@@ -1,0 +1,20 @@
+-- catch masked variables at compile time
+testdb=> SET plpgsql.extra_errors
+             TO 'shadowed_variables';
+
+-- create the function
+testdb=> CREATE OR REPLACE FUNCTION
+f_test_shadow( p1 int DEFAULT 1, p2 text DEFAULT 'Hello' )
+RETURNS text
+AS
+  ...
+LANGUAGE plpgsql;
+
+ERROR:  variable "p1" shadows a previously defined variable
+LINE 7:     p1 char(2) := 'P1'; -- masks function argument!
+            ^
+
+-- and the function has not been created!
+testdb=> SELECT f_test_shadow( 2, 'Luca' );
+ERROR:  function f_test_shadow(integer, unknown) does not exist
+LINE 1: SELECT f_test_shadow( 2, 'Luca' );

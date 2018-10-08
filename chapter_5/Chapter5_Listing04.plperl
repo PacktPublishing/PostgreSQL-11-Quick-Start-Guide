@@ -1,0 +1,38 @@
+ CREATE OR REPLACE FUNCTION
+f_files_from_directory( text DEFAULT '.' )
+RETURNS SETOF files
+AS
+  $code$
+  use Digest::MD5 qw(md5_base64);
+  my ( $dir ) = @_;
+  my $current_tuple;
+
+  elog( DEBUG, "Reading files into $dir" );
+
+  opendir( my $dir_handle, $dir ) || elog( EXCEPTION, "Cannot open $dir directory" );
+  while ( my $current_file = readdir( $dir_handle ) ) {
+        elog( DEBUG, "Building tuple for entry $current_file" );
+
+        # transform the name to absolute
+        my $absolute_file  = $dir . '/' . $current_file;
+
+        # skip directories
+        next if not -f $absolute_file;
+
+        my $pk = spi_exec_query( 'SELECT nextval( \'files_pk_seq\' )', 1 )
+                                 ->{ rows }[ 0 ]   # get the first row
+                                 ->{ nextval };    # get the only 'nextval' column
+        $current_tuple->{ pk } = $pk;
+        $current_tuple->{ f_name } = $current_file;
+        $current_tuple->{ f_size } = ( stat( $absolute_file ) )[ 7 ];
+        $current_tuple->{ ts }     = localtime( ( stat( $absolute_file ) )[ 9 ] );
+        $current_tuple->{ f_hash } = md5_base64( $absolute_file );
+        $current_tuple->{ f_type } = ( split /\./, $current_file )[ -1 ] || 'txt';
+
+        return_next( $current_tuple );
+  }
+
+  return undef;
+
+  $code$
+LANGUAGE plperlu;

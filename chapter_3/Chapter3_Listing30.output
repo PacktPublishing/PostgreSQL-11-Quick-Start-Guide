@@ -1,0 +1,3 @@
+ERROR:  Cannot proceed further
+DETAIL:  Cannot insert duplicated hash values!
+HINT:  You should check your unique constraints

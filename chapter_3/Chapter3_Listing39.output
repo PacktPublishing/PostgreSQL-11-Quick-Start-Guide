@@ -1,0 +1,8 @@
+DEBUG:  In the beginning FOUND = f
+DEBUG:  While iterating FOUND = f
+DEBUG:  After a failing statement FOUND = f
+DEBUG:  While iterating FOUND = f
+DEBUG:  After a succeeding statement FOUND = t
+DEBUG:  While iterating FOUND = t
+DEBUG:  After a failing statement FOUND = f
+DEBUG:  Outside the loop FOUND = t

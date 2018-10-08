@@ -1,0 +1,10 @@
+testdb=# BEGIN;
+testdb=# ALTER TABLE files DROP COLUMN f_size;
+
+DEBUG:  Event fired by command [ALTER TABLE] on [public.files]
+DEBUG:  Dropped object [public.files.f_size] of type [table column]
+DEBUG:  Dropped object [for public.files.f_size] of type [default value]
+DEBUG:  Dropped object [files_f_size_check on public.files] of type [table constraint]
+ALTER TABLE
+
+testdb=# ROLLBACK;

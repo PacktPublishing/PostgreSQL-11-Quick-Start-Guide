@@ -1,0 +1,6 @@
+testdb=> DELETE FROM files
+         WHERE f_name = 'ballbreaker.mp3';
+
+testdb=> SELECT * FROM playlist;
+ pk | p_name 
+----+--------

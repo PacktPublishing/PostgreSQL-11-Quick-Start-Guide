@@ -1,0 +1,12 @@
+testdb=> SELECT pg_temp.f_greetings( 'Luca' );
+   f_greetings   
+-----------------
+ Hello dear Luca
+(1 row)
+
+-- close the session and start it again
+testdb=> \q
+...
+testdb=> SELECT pg_temp.f_greetings( 'Luca' );
+ERROR:  schema "pg_temp" does not exist
+LINE 1: SELECT pg_temp.f_greetings( 'Luca' );

@@ -1,0 +1,8 @@
+testdb=# SELECT *
+         FROM f_files_from_directory( '/home/luca/git/fluca1978-pg-utils/examples/cte' );
+ pk  |            f_name             | f_size  |              f_hash              | f_type |         ts
+-----+-------------------------------+---------+----------------------------------+--------+---------------------
+ 124 | family_tree.sql               | 1879.00 | cc948a6e78a1581e350958c71093927d | sql    | 2018-05-31 16:17:19
+ 125 | family_tree_recursive_cte.sql |  400.00 | 42a149f41d3c78241160ea473154e4b5 | sql    | 2018-05-31 16:17:19
+ 126 | file_system_cte.sql           | 1424.00 | acc41b140745747e7647de742868d768 | sql    | 2018-05-31 16:17:19
+ 127 | star_wars_family_tree_cte.sql | 2937.00 | 3e2bf991e553ae86e6f1ca2aa525b597 | sql    | 2018-05-31 16:17:19

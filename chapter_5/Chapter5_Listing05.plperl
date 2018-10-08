@@ -1,0 +1,37 @@
+CREATE OR REPLACE FUNCTION
+f_insert_tags( text, text DEFAULT '>' )
+RETURNS SETOF tags        -- returns the inserted tuples
+AS
+ $code$
+
+  my ( $tag_string, $separator ) = @_;
+  my $current_tuple;
+
+  my $prepared_statement = spi_prepare( 'INSERT INTO tags( t_name, t_child_of )VALUES( $1, $2 ) RETURNING *',
+                                        'text',
+                                        'int' );
+
+  for my $tag  ( split $separator, $tag_string ) {
+    ( $current_tuple->{ t_name }  = $tag ) =~ s/^\s+|\s+$//g;
+    $current_tuple->{ t_child_of } = $current_tuple->{ pk };
+    elog( DEBUG,
+          "Inserting tag $current_tuple->{ t_name } child of $current_tuple->{ t_child_of } " );
+
+    my $result_set = spi_exec_prepared( $prepared_statement,
+                                     $current_tuple->{ t_name },
+                                     $current_tuple->{ t_child_of } );
+
+    if ( $result_set->{ status } == SPI_OK_INSERT_RETURNING ) {
+       $current_tuple = $result_set->{ rows }[ 0 ];
+       return_next( $current_tuple );
+    }
+    else {
+      elog( EXCEPTION, "Cannot insert tag $current_tuple->{ t_name } " );
+    }
+  }
+
+  return undef;
+  $code$
+LANGUAGE plperl
+STRICT      -- returns null on null input!
+VOLATILE;   -- changes the database status!
