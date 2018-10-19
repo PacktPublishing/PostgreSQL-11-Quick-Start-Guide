@@ -7,7 +7,9 @@ This repository contains code examples related to the *"PostgreSQL 11 Server Sid
 
 ### Naming conventions
 
+
 The repository is organized on a *per-chapter* basis: each chapter in the book will have a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `chapter_2` with the name `Chapter2_Listing03.sql`, that is `chapter_2/Chapter2_Listing03.sql`.
+
 
 Each file has a suffix corresponding to the type of the file, with main suffixes being:
 - `.sql` a script file, either SQL or PL/pgSQL file that can be executed directly into a PostgreSQL prompt (e.g., via `psql(1)`);
@@ -21,3 +23,4 @@ Chapter3_Listing01.output
 ```
 
 it means that the the output file is related to the command in the SQL file, and the two are shown within the same Listing (in this case, numbered 01).
+
