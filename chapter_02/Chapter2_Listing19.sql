@@ -13,7 +13,7 @@ WITH RECURSIVE tags_tree AS (
   JOIN tags_tree tt ON tt.pk = ct.t_child_of
 )
 
-SELECT name
+SELECT t_name
 FROM tags_tree
 WHERE t_name like '%2018%'
 AND level > 1;

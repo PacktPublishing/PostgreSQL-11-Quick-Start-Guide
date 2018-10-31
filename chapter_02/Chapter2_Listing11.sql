@@ -4,5 +4,5 @@ WITH
 , delete_files      AS ( DELETE FROM files )
 
 SELECT r, s
-FROM get_random_number r
+FROM get_random_number r,
      generate_series( 1, 3 ) s;
