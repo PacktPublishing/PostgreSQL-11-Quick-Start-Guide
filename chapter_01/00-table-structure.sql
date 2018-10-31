@@ -18,7 +18,7 @@ BEGIN;
 
 \i 04-archive_files-table.sql
 
-\i 05-playlist.sql
+\i 05-playlist-table.sql
 
 
 
