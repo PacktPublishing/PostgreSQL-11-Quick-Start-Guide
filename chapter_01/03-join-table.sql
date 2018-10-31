@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS j_files_tags (
    -- do not allow the same tag on the same file twice!
    UNIQUE( f_pk, t_pk ),
 
-   FOREIGN KEY ( f_pk ) REFERENCES files( pk ),
-   FOREIGN KEY ( t_pk ) REFERENCES tags( pk )
+   FOREIGN KEY ( f_pk ) REFERENCES files( pk ) ON DELETE CASCADE,
+   FOREIGN KEY ( t_pk ) REFERENCES tags( pk )  ON DELETE CASCADE
 );
