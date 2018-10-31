@@ -2,7 +2,7 @@ DO
  $code$
  BEGIN
    -- do stuff
-   ...
+--   ...
    RAISE
          USING
          ERRCODE = 'unique_violation',

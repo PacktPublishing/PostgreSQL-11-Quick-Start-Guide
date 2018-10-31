@@ -1,16 +1,12 @@
-DO
- $code$
+DO $code$
  DECLARE
-    size_array numeric[];
-    current_size numeric( 8,2 );
+   pi CONSTANT real := 3.14;
+   greeting_text CONSTANT text := 'Greetings ';
+   people text[] := ARRAY[ 'Mr. Green', 'Mr. Red' ];
+   current_person text;
  BEGIN
-    -- store the sizes into the array
-    SELECT array_agg( f_size )
-    INTO   size_array
-    FROM   files;
-
-    FOREACH current_size IN ARRAY size_array LOOP
-       RAISE INFO 'Current size is %', current_size;
-    END LOOP;
- END
- $code$;
+   FOREACH current_person IN ARRAY people LOOP
+      RAISE INFO '% %', greeting_text, current_person;
+      RAISE INFO 'Did you know that PI is %?', pi;
+   END LOOP;
+ END $code$;
