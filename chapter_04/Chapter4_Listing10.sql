@@ -14,7 +14,7 @@ AS
       FOR i IN 1 .. max LOOP
           current_tuple.pk = nextval( 'files_pk_seq' );
           current_tuple.f_name := initcap( 'file_' || i );
-          current_tuple.f_size := random() * 1024 * 1024 / random();
+          current_tuple.f_size := random() * 1024 * 1024;
 
           CASE i % 3
                WHEN 0 THEN current_tuple.f_type := 'txt';
