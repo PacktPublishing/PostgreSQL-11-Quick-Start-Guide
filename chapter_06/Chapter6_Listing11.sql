@@ -1,3 +1,5 @@
+DROP TRIGGER IF EXISTS tr_infer_file_type ON files;
+
 CREATE TRIGGER tr_infer_file_type
 BEFORE
 INSERT OR UPDATE
