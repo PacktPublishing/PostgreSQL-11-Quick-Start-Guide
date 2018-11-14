@@ -15,7 +15,7 @@ DO
       FROM biggest_file_by_type
     );
 
-    RAISE INFO 'I''m survived!';
+    RAISE INFO 'I''ve survived!';
 
    END
  $code$;

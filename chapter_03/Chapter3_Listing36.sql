@@ -12,6 +12,6 @@ DO
           WHERE f_type = file_type -- interpolation
           ORDER BY f_size DESC;
 
-  RAISE INFO 'I''m survived!';
+  RAISE INFO 'I''ve survived!';
  END
  $code$;
