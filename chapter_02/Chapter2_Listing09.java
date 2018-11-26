@@ -4,7 +4,7 @@ class returning {
         String connectionURL = "jdbc:postgresql://localhost/testdb";
         Properties connectionProperties = new Properties();
         connectionProperties.put( "user", "luca" );
-        connectionProperties.put( "password", "radian" );
+        connectionProperties.put( "password", "xxxx" );
         Connection conn = DriverManager.getConnection( connectionURL, connectionProperties );
 
         String query = "INSERT INTO files( f_name, f_hash, f_size ) "

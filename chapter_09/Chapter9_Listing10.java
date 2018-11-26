@@ -8,7 +8,7 @@ class PlayListManager {
         Class.forName( "org.postgresql.Driver" );
         String url = "jdbc:postgresql://localhost:5432/testdb";
 
-        Connection databaseConnection = DriverManager.getConnection( url,"luca", "radian" );
+        Connection databaseConnection = DriverManager.getConnection( url,"luca", "xxxx" );
 
         Statement listenCommand = databaseConnection.createStatement();
         listenCommand.execute( "LISTEN new_music_event" );

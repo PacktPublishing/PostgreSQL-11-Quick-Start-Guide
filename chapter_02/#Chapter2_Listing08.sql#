@@ -1,6 +1,0 @@
-DELETE
-FROM files
-CASCADE
-
-
-RETURNING *;

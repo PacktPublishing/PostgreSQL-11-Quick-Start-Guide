@@ -5,7 +5,7 @@ use v5.20;
 use DBI;
 
 my $database_connection =
-    DBI->connect( 'dbi:Pg:dbname=testdb host=localhost', 'luca', 'radian' )
+    DBI->connect( 'dbi:Pg:dbname=testdb host=localhost', 'luca', 'xxxxx' )
     || die "\nCannot connect to database \n$!";
 
 # subscribe to the channel
