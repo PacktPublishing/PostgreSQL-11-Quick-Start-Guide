@@ -1,11 +1,13 @@
-# PostgreSQL-11-Quick-Start-Guide
-Published by Packt, Author Luca Ferrari (fluca1978)
+# PostgreSQL 11 Server Side Programming Quick Start Guide
 
-## Content of the repository
+This repository contains code examples related to the book 
+**[PostgreSQL 11 Server Side Programming Quick Start Guide](https://www.packtpub.com/big-data-and-business-intelligence/postgresql-11-server-side-programming-quick-start-guide)** 
+published by [Packt](https://www.packtpub.com/), 
+author [Luca Ferrari (fluca1978)](https://fluca1978.github.io)
 
-This repository contains code examples related to the *"PostgreSQL 11 Server Side Programming Quick Start Guide"* book published by Packt.
+[![PostgreSQL-11-ServerSideProgramming-cover-image](/images/cover.png)](https://www.packtpub.com/big-data-and-business-intelligence/postgresql-11-server-side-programming-quick-start-guide)
 
-### Naming conventions
+## Naming conventions
 
 
 The repository is organized on a *per-chapter* basis: each chapter in the book will have a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `chapter_2` with the name `Chapter2_Listing03.sql`, that is `chapter_02/Chapter2_Listing03.sql`.
@@ -22,5 +24,5 @@ Chapter3_Listing01.sql
 Chapter3_Listing01.output
 ```
 
-it means that the the output file is related to the command in the SQL file, and the two are shown within the same Listing (in this case, numbered 01).
+it means that the the output file is related to the command in the SQL file, and the two are shown within the same Listing `01`.
 
