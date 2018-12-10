@@ -41,13 +41,13 @@ char* to_string( ImgRes* object ){
 **Following is what you need for this book:**
 This book is for database administrators, data engineers, and database engineers who want to implement advanced functionalities and master complex administrative tasks with PostgreSQL 11.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-11).
+With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
 
 ### Software and Hardware List
 
 | Chapter  | Software required                   | OS required                        |
 | -------- | ------------------------------------| -----------------------------------|
-| 1-11     | PostgreSQL 11                       | Unix or Linux (Any)                |
+| 1-10     | PostgreSQL 11                       | Unix or Linux (Any)                |
 | 4-5      | Perl 5 (5.27.8 or higher)           | Unix or Linux (Any)                |
 | 4-5      | Java JDK (version 8, update 181)    | Unix or Linux (Any)                |
 | 7        | Python                              | Unix or Linux (Any)                |
