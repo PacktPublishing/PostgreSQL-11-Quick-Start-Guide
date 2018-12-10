@@ -5,26 +5,10 @@
 This is the code repository for [PostgreSQL 11 Server Side Programming Quick Start Guide](https://www.packtpub.com/big-data-and-business-intelligence/postgresql-11-server-side-programming-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789342222), published by Packt.
 
 
-## Table of Contents
-
-The book is organized in 10 chapters:
-
-- *Chapter 1*, **Introduction to Server Side Programming**;
-- *Chapter 2*, **Query Tricks**;
-- *Chapter 3*, **The PL/pgSQL Language**;
-- *Chapter 4*, **Stored Procedures**;
-- *Chapter 5*, **PL/Perl and PL/Java**;
-- *Chapter 6*, **Triggers**;
-- *Chapter 7*, **Rules and the Query Rewriting System**;
-- *Chapter 8*, **Extensions**;
-- *Chapter 9*, **Intra-Process Communications**;
-- *Chapter 10*, **Custom Data Types**;
-
-The code contained in this repository is organized with regard to above table of contents.
 
 ## Naming conventions
 
-Each chapter in the book has a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `chapter_2` with the name `Chapter2_Listing03.sql`, that is `chapter_02/Chapter2_Listing03.sql`.
+Each chapter in the book has a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `Chapter02` with the name `Chapter2_Listing03.sql`, that is `Chapter02/Chapter2_Listing03.sql`.
 
 ## What is this book about?
 PostgreSQL is a rock-solid, scalable, and safe enterprise-level relational database. With a broad range of features and stability, it is ever increasing in popularity.This book shows you how to take advantage of PostgreSQL 11 features for server-side programming. Server-side programming enables strong data encapsulation and coherence.
@@ -41,9 +25,26 @@ If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1789
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
 
+### Table of Contents
+
+The book is organized in 10 chapters:
+
+- *Chapter 1*, **Introduction to Server Side Programming**;
+- *Chapter 2*, **Query Tricks**;
+- *Chapter 3*, **The PL/pgSQL Language**;
+- *Chapter 4*, **Stored Procedures**;
+- *Chapter 5*, **PL/Perl and PL/Java**;
+- *Chapter 6*, **Triggers**;
+- *Chapter 7*, **Rules and the Query Rewriting System**;
+- *Chapter 8*, **Extensions**;
+- *Chapter 9*, **Intra-Process Communications**;
+- *Chapter 10*, **Custom Data Types**;
+
+The code contained in this repository is organized with regard to above table of contents.
+
 
 ## Instructions and Navigations
-All of the code is organized into folders. For example, Chapter02.
+All of the code is organized into folders, one per chapter, as for example `Chapter02`.
 
 The code will look like the following:
 ```
@@ -63,14 +64,15 @@ This book is for database administrators, data engineers, and database engineers
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
 
-### Software and Hardware List
+### Software List
 
-| Chapter  | Software required                   | OS required                        |
-| -------- | ------------------------------------| -----------------------------------|
-| 1-10     | PostgreSQL 11                       | Unix or Linux (Any)                |
-| 4-5      | Perl 5 (5.27.8 or higher)           | Unix or Linux (Any)                |
-| 4-5      | Java JDK (version 8, update 181)    | Unix or Linux (Any)                |
-| 7        | Python                              | Unix or Linux (Any)                |
+|  Chapter | Software required                    | OS recommended                      |
+| -------- | ------------------------------------ | ----------------------------------- |
+|     1-10 | PostgreSQL 11                        | Unix or Linux (Any)                 |
+|      4-5 | Perl 5 (5.27.8 or higher)            | Unix or Linux (Any)                 |
+|      4-5 | Java JDK (version 8, update 181)     | Unix or Linux (Any)                 |
+|        7 | Python                               | Unix or Linux (Any)                 |
+|        9 | C Compiler                           | Unix or Linux (Any)                 |
 
 ### Related products 
 * Learning PostgreSQL 10 - Second Edition [[Packt]](https://india.packtpub.com/in/big-data-and-business-intelligence/learning-postgresql-10-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788392013) [[Amazon]](https://www.amazon.com/dp/1788392019)
