@@ -7,10 +7,26 @@ author [Luca Ferrari (fluca1978)](https://fluca1978.github.io)
 
 [![PostgreSQL-11-ServerSideProgramming-cover-image](/images/cover.png)](https://www.packtpub.com/big-data-and-business-intelligence/postgresql-11-server-side-programming-quick-start-guide)
 
+## Table of Contents
+
+The book is organized in 10 chapters:
+
+- *Chapter 1*, **Introduction to Server Side Programming**;
+- *Chapter 2*, **Query Tricks**;
+- *Chapter 3*, **The PL/pgSQL Language**;
+- *Chapter 4*, **Stored Procedures**;
+- *Chapter 5*, **PL/Perl and PL/Java**;
+- *Chapter 6*, **Triggers**;
+- *Chapter 7*, **Rules and the Query Rewriting System**;
+- *Chapter 8*, **Extensions**;
+- *Chapter 9*, **Intra-Process Communications**;
+- *Chapter 10*, **Custom Data Types**;
+
+The code contained in this repository is organized with regard to above table of contents.
+
 ## Naming conventions
 
-
-The repository is organized on a *per-chapter* basis: each chapter in the book will have a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `chapter_2` with the name `Chapter2_Listing03.sql`, that is `chapter_02/Chapter2_Listing03.sql`.
+Each chapter in the book has a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `chapter_2` with the name `Chapter2_Listing03.sql`, that is `chapter_02/Chapter2_Listing03.sql`.
 
 
 Each file has a suffix corresponding to the type of the file, with main suffixes being:
