@@ -1,8 +1,8 @@
 # PostgreSQL 11 Server Side Programming Quick Start Guide
 
-<a href="Packt UTM URL of the Book"><img src="Cover Image URL of the Book" alt="Book Name" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/big-data-and-business-intelligence/postgresql-11-server-side-programming-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789342222"><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B11208.png" alt="PostgreSQL 11 Server Side Programming Quick Start Guide" height="256px" align="right"></a>
 
-This is the code repository for [PostgreSQL 11 Server Side Programming Quick Start Guide](Packt UTM URL of the Book), published by Packt.
+This is the code repository for [PostgreSQL 11 Server Side Programming Quick Start Guide](https://www.packtpub.com/big-data-and-business-intelligence/postgresql-11-server-side-programming-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789342222), published by Packt.
 
 **Effective database programming and interaction**
 
@@ -52,20 +52,14 @@ With the following software and hardware list you can run all code files present
 | 4-5      | Java JDK (version 8, update 181)    | Unix or Linux (Any)                |
 
 ### Related products <Paste books from the Other books you may enjoy section>
-* Learning PostgreSQL 10 - Second Edition [[Packt]](https://www.packtpub.com/networking-and-servers/linux-powerful-server-administration?utm_source=github&utm_medium=repository&utm_campaign=9781788293778) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* Learning PostgreSQL 10 - Second Edition [[Packt]](https://india.packtpub.com/in/big-data-and-business-intelligence/learning-postgresql-10-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788392013) [[Amazon]](https://www.amazon.com/dp/1788392019)
 
-* PostgreSQL 10 Administration Cookbook [[Packt]](https://www.packtpub.com/networking-and-servers/linux-device-drivers-development?utm_source=github&utm_medium=repository&utm_campaign=9781785280009) [[Amazon]](https://www.amazon.com/dp/1788293770)
+* PostgreSQL 10 Administration Cookbook [[Packt]](https://india.packtpub.com/in/big-data-and-business-intelligence/postgresql-10-administration-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781788474924) [[Amazon]](https://www.amazon.com/dp/1788474929)
 
 ## Get to Know the Author
 **Luca**
 has been passionate about computer science since the Commodore 64 era, and today holds a master's degree (with honors) and a PhD from the University of Modena and Reggio Emilia. He has written several research papers, technical articles, and book chapters.
-
 In 2011, he was named Adjunct Professor by the University of Nipissing. An avid Unix user, he is a strong advocate of open source, and in his free time he collaborates with a few projects. He met PostgreSQL back in release 7.3; he was a founder and former president of the Italian PostgreSQL Community (ITPUG), he talks regularly at technical conferences and events, and delivers professional training. In his teenage years, he was quite a proficient archer. He lives in Italy with his beautiful wife, son, and two (female) cats.
-
-
-## Other books by the authors
-* [Mastering Linux Network Administration](https://www.packtpub.com/networking-and-servers/mastering-linux-network-administration?utm_source=github&utm_medium=repository&utm_campaign=9781784399597)
-* [Linux Mint Essentials](https://www.packtpub.com/networking-and-servers/linux-mint-essentials?utm_source=github&utm_medium=repository&utm_campaign=9781782168157)
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
