@@ -66,13 +66,13 @@ With the following software and hardware list you can run all code files present
 
 ### Software List
 
-|  Chapter | Software required                    | OS recommended                      |
-| -------- | ------------------------------------ | ----------------------------------- |
-|     1-10 | PostgreSQL 11                        | Unix or Linux (Any)                 |
-|      4-5 | Perl 5 (5.27.8 or higher)            | Unix or Linux (Any)                 |
-|      4-5 | Java JDK (version 8, update 181)     | Unix or Linux (Any)                 |
-|        7 | Python                               | Unix or Linux (Any)                 |
-|        9 | C Compiler                           | Unix or Linux (Any)                 |
+|  Chapter | Software required                          | OS recommended                      |
+| -------- | ------------------------------------------ | ----------------------------------- |
+|     1-10 | PostgreSQL 11                              | Unix or Linux (Any)                 |
+|      4-6 | Perl 5 (5.27.8 or higher)                  | Unix or Linux (Any)                 |
+|      4-6 | Java JDK (version 8, update 181 or higher) | Unix or Linux (Any)                 |
+|        8 | Python                                     | Unix or Linux (Any)                 |
+|     9-10 | C Compiler                                 | Unix or Linux (Any)                 |
 
 ### Related products 
 * Learning PostgreSQL 10 - Second Edition [[Packt]](https://india.packtpub.com/in/big-data-and-business-intelligence/learning-postgresql-10-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788392013) [[Amazon]](https://www.amazon.com/dp/1788392019)
