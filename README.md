@@ -8,7 +8,8 @@ This is the code repository for **[PostgreSQL 11 Server Side Programming Quick S
 
 ## Naming conventions
 
-Each chapter in the book has a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `Chapter02` with the name `Chapter2_Listing03.sql`, that is `Chapter02/Chapter2_Listing03.sql`.
+Each chapter in the book has a corresponding folder within the repository. Each folder contains a set of files named after the chapter number and the listing in the chapter: as an example the listing 3 of chapter 2 is placed in the folder `Chapter02` with the name `Chapter02_Listing03.sql`, that is `Chapter02/Chapter02_Listing03.sql`.
+
 
 ## What is this book about?
 PostgreSQL is a rock-solid, scalable, and safe enterprise-level relational database. With a broad range of features and stability, it is ever increasing in popularity.This book shows you how to take advantage of PostgreSQL 11 features for server-side programming. Server-side programming enables strong data encapsulation and coherence.
@@ -59,10 +60,18 @@ ImgRes* new_ImgRes() {
 char* to_string( ImgRes* object ){
 ```
 
+
+Each source code file has a suffix that indicates the type of the file itself, mainly:
+- `.sql` means the file contain SQL statement(s);
+- `.perl` or `.plperl` means the file contains Perl 5 code;
+- `.java` means the file contains Java source code;
+- `.output` means the file contains text output of the execution of a SQL statement or another executable code.
+
+
 **Following is what you need for this book:**
 This book is for database administrators, data engineers, and database engineers who want to implement advanced functionalities and master complex administrative tasks with PostgreSQL 11.
 
-With the following software and hardware list you can run all code files present in the book (Chapter 1-10).
+With the following software list you can run all code files present in the book (Chapters 1-10).
 
 ### Software List
 
@@ -82,7 +91,10 @@ With the following software and hardware list you can run all code files present
 ## Get to Know the Author
 **Luca**
 has been passionate about computer science since the Commodore 64 era, and today holds a master's degree (with honors) and a PhD from the University of Modena and Reggio Emilia. He has written several research papers, technical articles, and book chapters.
-In 2011, he was named Adjunct Professor by the University of Nipissing. An avid Unix user, he is a strong advocate of open source, and in his free time he collaborates with a few projects. He met PostgreSQL back in release 7.3; he was a founder and former president of the Italian PostgreSQL Community (ITPUG), he talks regularly at technical conferences and events, and delivers professional training. In his teenage years, he was quite a proficient archer. He lives in Italy with his beautiful wife, son, and two (female) cats.
+In 2011, he was named Adjunct Professor by the University of Nipissing. 
+An avid Unix user, he is a strong advocate of open source, and in his free time he collaborates with a few projects. He met PostgreSQL back in release 7.3; he was a founder and former president of the Italian PostgreSQL Community (ITPUG), he talks regularly at technical conferences and events, and delivers professional training. 
+In his teenage years, he was quite a proficient archer. 
+He lives in Italy with his beautiful wife, son, and two (female) cats.
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
