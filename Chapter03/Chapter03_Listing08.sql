@@ -10,5 +10,5 @@ DO $code$
    WHERE  f_type = file_type  
    ORDER BY f_size DESC
    LIMIT 1;
-   RAISE INFO 'Biggest % file is %', f_type, file_name;
+   RAISE INFO 'Biggest % file is %', file_type, file_name;
  END $code$;
